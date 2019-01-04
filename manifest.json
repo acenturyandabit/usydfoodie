@@ -1,0 +1,16 @@
+{
+    "short_name": "USYD Foodie",
+    "name": "USYD Foodie",
+    "icons": [
+      {
+        "src": "images/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "index.html",
+    "background_color": "#eeee22",
+    "display": "standalone",
+    "scope": "index.html",
+    "theme_color": "#eeee22"
+  }

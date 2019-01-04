@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../common/metastyle.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="../jquery.min.js"></script>
+    <script src="../common/nav.js"></script>
+    <script src="epicDateParser.js"></script>
+    <script src="manager.js"></script>
+    <script src="xpass.js"></script>
+    <script src="fireman.js"></script>
+    <style>
+        .title {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+
+        .title>div {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
+            text-align: center;
+        }
+        textarea{
+            font-size: 1em;
+        }
+    </style>
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <div class="title">
+        <div>
+            <h1>Host your food event with USYD Foodie!</h1>
+            <p>>> Ease of ACCESS - Get a list of all your participants ACCESS numbers with just one click!</p>
+            <p>>> More attendees - Reach every student with the USYD Foodie app!</p>
+            <button onclick="transitionTo('.form')">Get Started!</button>
+        </div>
+    </div>
+    <div class="form">
+        <div style="text-align: center">
+            <h1>Enter the following details...</h1>
+            <input data-role="eventHost" placeholder="Society Name"><br>
+            <input data-role="eventName" placeholder="Event Name"><br>
+            <input data-role="eventDate" placeholder="Event date (e.g. 11th of November)"><br>
+            <input data-role="eventLocation" placeholder="Location"><br>
+            <textarea data-role="eventDescription" placeholder="Event Description"></textarea><br>
+            <!--<p>To setup a recurring event, add a members list and more, press the button below!</p>
+            <button onclick="transitionTo('moreOptions')">More options</button>-->
+            <button onclick="transitionTo('.allset')">Publish event!</button>
+        </div>
+    </div>
+    <div class="allset">
+        <div>
+            <h1>Event summary:</h1>
+            <p>Your eventcode is <em data-role="eventCode">eventcode</em>.</p>
+            <p>You can access your event at this link: <a class="eventLink"></a> </p>
+            <p>Your event password is <em data-role="eventPassword">EVENTPASSWORD</em>. Keep this safe! If you lose this, email our dev:
+                steeven.liu2@gmail.com</p>
+            <h2>Here's what we have so far:</h2>
+            <p>Event Host: <span data-role="eventHost"></span></p>
+            <p>Event Name: <span data-role="eventName"></span></p>
+            <p>Event Date: <span data-role="eventDate"></span></p>
+            <p>Event Location: <span data-role="eventLocation"></span></p>
+            <button onclick="transitionTo('.form')">Edit</button>
+            <button onclick="transitionTo('.attendees')">View Attendees</button>
+        </div>
+    </div>
+    <div class="passwall">
+        <div>
+        </div>
+    </div>
+    <div class="attendees">
+        <div>
+            <h1>Attendees</h1>
+            <table class="attList">
+            </table>
+            <button onclick="transitionTo('.allset')">Back</button>
+        </div>
+    </div>
+</body>
+
+</html>

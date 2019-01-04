@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href='common/metastyle.css'>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href='index.css'>
+    <script src="pwa.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="common/nav.js"></script>
+    <script src="foodcore.js"></script>
+</head>
+
+<body>
+    <div class="title">
+        <div>
+            <h1>Hello from USYD Foodie!</h1>
+            <p>It's your list of all the free (or semi-free) ACCESS food all in one place!</p>
+            <button onclick="gotoList()">View up and coming events</button>
+        </div>
+    </div>
+    <div class="list">
+        <div>
+            <h1>Free food events</h1>
+            <p>Tap on any event for more info.</p>
+            <div class="eventsList">
+                <p style="font-size: 0.7em; color: grey">Ack :/ Looks like we got nuthin'. Maybe check again later?</p>
+            </div>
+        </div>
+    </div>
+    <div class="selEvent">
+        <h2 class="eventName">Selected event</h2>
+        <h3>Brought to you by:<em class="eventHost">PhySoc</em></h3>
+        <h3>Time:</h3>
+        <p class="eventDate">11th of Nopevember</p>
+        <h3>Location:</h3>
+        <p class="eventLocation">The Milky Way Bar</p>
+        <h3>Description:</h3>
+        <p class="eventDescription">The Milky Way Bar</p>
+        <button class="_rgst">I'm going!</button><br>
+        <button class="_gvng vtk">View ticket</button><br>
+        <button class="_gvng">I can't make it :(</button>
+    </div>
+    <div class="ticket">
+        <!--ticket-->
+        <h2 class="eventName">Selected event</h2>
+        <!--<p>eventcode</p>-->
+        <h3>Name: <span class="userName">Stoofen Lyoo</span></h3>
+        <h3>ACCESS Number: <span class="accessNo"></span></h3>
+        <!--<h3>Member?</h3>
+        <p>Yes/No</p>
+        -->
+        <p>Date: <span class="eventDate"></span></p>
+        <p>Location: <span class="eventLocation"></span></p>
+        <div>Press back to go back</div>
+    </div>
+    <div class="signup">
+        <h2>About you!</h2>
+        <p class="signupPrompt">To help fasttrack the food-getting, prefill your details here!</p>
+        <h3>Name</h3>
+        <input class="nameInput">
+        <h3>ACCESS Number</h3>
+        <input class="accessNoInput" type="number">
+        <br><br>
+        <p>You only ever need to do this once! Your phone will remember your ACCESS number and submit it to the event
+            organisers automatically.</p>
+        <button>Done!</button>
+    </div>
+    <div class="a2hs">
+        <h2>Want to add us to your homescreen?</h2>
+        <input type="checkbox">
+        <p>Notify me of events I've signed up for</p>
+        <input type="checkbox">
+        <p>Notify me of new events</p>
+        <button>Sure!</button><button>Nah</button>
+    </div>
+</body>
+
+</html>

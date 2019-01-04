@@ -1,0 +1,76 @@
+
+        //Free food calendar
+        /*
+ux flow:
+0. Someone tells user that they can access this nifty free food calendar and its better than raksoc's
+1. User goes onto website, scrolls thru the first 3 results
+2. 4th result says 'Hey there! regular free food conesseur? Help us make your free food experience fast in just 3 steps.
+2.1. 1) Enter your name and access number, so you'll never need to be asked for it again.
+2.2. 2) Add this site to your homepage, so you can access it quick smart.
+2.3. 3) Select food events and we'll notify you so you never forget!
+2.4. Yes please / not now
+if click yes please:
+2.5. Alright! welcome aboard! 
+Enter your access number below:
+[------------------]
+And your name:
+[------------------]
+Next ->
+2.6. Ok, now add us to your homescreen...
+[done]
+2.7. All good! Now just select the events you're interested in.
+2.8. You're all set!
+Your next free food event is on xx.xx. When you're there, just open this app and 
+tap the 'Going!' button, and you'll be ready to go!
+
+::when an event is tapped
+>> event name, organisation, location, event ID, 'Going button'
+::when 'Going!' is tapped
+>>ADMIT ONE<<
+--present this to your event organiser for INSTANT verification!--
+--NOTE! You may still need to pay membership fees to the organisation if you are a member. This service is, however, free!
+>>event name<<
+>>name<<
+>>Access<<
+--advertisment banner--
+>>ADMIT ONE<<
+
+ux for organisers
+0. I tell them hoi you can make an event!
+1. User navigates to /events
+Register an event on usydfoodie
+3 fantastic reasons to register your events
+- Get Access numbers from attendees with just one tap. No more dodgy google forms!
+- Notify hundreds of uni students about your events.
+- Set up event schedules in a single click!
+usydfoodie: Event planning made EASY.
+register-->
+click register
+4 steps to go:
+1. What is your organisation?
+[---------]
+2. What's the event called?
+[---------]
+3. Where is the event?
+[---------]
+4. When is the event?
+[---------]
+Recurrence:
+[]weekly
+[]fortnightly
+[]monthly
+>>OK!>>
+Your event:
+Event code: 
+---org-event-date
+event name:
+---
+organisation:
+--- 
+location:
+---
+Attendees:
+---
+Access number, 
+Access
+        */
