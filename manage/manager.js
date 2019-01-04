@@ -55,11 +55,10 @@ var usydFoodieManager=function(){
                     let goings=me.cachedEvent.going;
                     if (goings && Object.keys(goings).length){
                         for (let g in goings){
-                            $(".attList").append("<tr><td>"+g+"</td><td>"+goings[g].name+"</td></tr>");
+                            if (!goings[g].unreg)$(".attList").append("<tr><td>"+g+"</td><td>"+goings[g].name+"</td></tr>");
                         }
-                    }else{
-                        $(".attList").append("<tr><td>No attendees yet...</td></tr>");
                     }
+                    if (!($(".attList tr").length))$(".attList").append("<tr><td>No attendees yet...</td></tr>");
                 });
                 me.attHooked = true;
             }

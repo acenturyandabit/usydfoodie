@@ -17,7 +17,7 @@ $(() => {
     window.history.pushState({}, '');
 })
 
-function transitionTo(next) {
+function transitionTo(next,removeThis) {
     let args = {
         prev: navstack.stack[navstack.stack.length - 1],
         dest: next,
@@ -41,6 +41,7 @@ function transitionTo(next) {
             $(navstack.stack[navstack.stack.length - 1]).show();
         } else {
             $(navstack.stack[navstack.stack.length - 1]).addClass('hidden');
+            if (removeThis)navstack.stack.pop();
             navstack.stack.push(next);
             $(navstack.stack[navstack.stack.length - 1]).removeClass('hidden');
             $(navstack.stack[navstack.stack.length - 1]).show();

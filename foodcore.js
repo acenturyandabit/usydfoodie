@@ -57,17 +57,36 @@ $(() => {
             transitionTo(".ticket");
         }
     })
+    $("button.cntmk").on("click",()=>{
+        //unregister user to event @ firebase
+        updateobj={};
+        updateobj["going."+userData.accessNo]={unreg: true, accessNo: userData.accessNo,name:userData.name};
+        db.collection('usydfoodie_events').doc(selectedEvent).update(updateobj);
+        userData.goingTo[selectedEvent]=false;
+        localStorage.setItem("userData",JSON.stringify(userData));
+        $("div[data-eventcode='"+selectedEvent+"']")[0].classList.remove("gvng");
+        $(".selEvent")[0].classList.remove("gvng");
+        transitionTo(".list");
+    })
     $(".signup button").on("click", () => {
         //some validation
         accessNo=$(".accessNoInput")[0].value;
         name=$(".nameInput")[0].value;
         if (accessNo>1000000 && accessNo<9000000 && name.length>0){
+            //save user data on phone
             userData={"accessNo":accessNo,"name":name,goingTo:{}};
             $(".ticket .userName").text(userData.name);
             $(".ticket .accessNo").text(userData.accessNo);
             localStorage.setItem("userData",JSON.stringify(userData));
-            navstack.stack.pop();//remove self from navigation stack.
-            transitionTo(".ticket");
+            //register user to event @ firebase
+            updateobj={};
+            updateobj["going."+userData.accessNo]={accessNo: userData.accessNo,name:userData.name};
+            db.collection('usydfoodie_events').doc(selectedEvent).update(updateobj);
+            userData.goingTo[selectedEvent]=true;
+            localStorage.setItem("userData",JSON.stringify(userData));
+            $("div[data-eventcode='"+selectedEvent+"']")[0].classList.add("gvng");
+            $(".selEvent")[0].classList.add("gvng");
+            transitionTo(".ticket",true);
         }else{
             $(".signupPrompt").text("Hmm, something's not right. Try again please?");
         }
